@@ -35,6 +35,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
+    z-index: 100;
 
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -49,10 +50,26 @@ body {
     padding-top: 50px;
 	padding-left: 50px;
     background: $dark-background-color;
+    display: none;
 
     @media (min-width: $header-hamburger-breakpoint) {
         width: 380px;
     }
+
+    @media (min-width: $mobile-breakpoint) {
+        display: block;
+    }
+}
+
+.docs-sidebar--showing {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    display: block;
+    z-index: 300;
+    overflow: auto;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .docs-menu {
